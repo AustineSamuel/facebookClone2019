@@ -1,0 +1,264 @@
+<!Doctype HTML>
+<html>
+<head>
+<meta charset="urf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../facebook.css" type="text/css"/>
+<script src="../jquery.js"></script>
+<script src="../scripts/loadScript.js" type="text/javascript"></script>
+
+<title>FACEBOOK CLONE</title>
+<style type="text/css">
+#chatR1 td{
+padding:15px;
+border-bottom:1px solid lightgrey;
+border-left:1px solid lightgrey;
+}
+#chatR2{
+padding:20px;
+border-bottom:10px solid #F7F8FF;
+}
+#chatR2 td div{
+border:1px solid lightgrey;
+width:50px;
+height:50px;
+border-radius:25px;
+}
+img{
+width: 100%;
+height: 100%;
+border-radius: inherit;
+}
+#chatR2 td span{
+font-size: 10px;
+color:dimgrey;
+}
+#chatR2 td .statusC{
+background:#26F514;
+padding:1px 1px;
+border-radius: 12px;
+position:relative;
+width:8px;
+height:8px;
+margin-top:-15px;
+margin-left:33px;
+border:px solid lightgrey;
+}
+#chatR3 td div img,#chat img{
+width: 60px;
+height:60px;
+border-radius:30px;
+border:1px solid grey;
+}
+#search{
+width:100%;
+background:#F7F8FF;
+height:auto;
+padding: 12px 0px;
+text-align: center;
+}
+#search #searching{
+font-size:20px;
+outline:none;
+width: 80%;
+height:35px;
+padding:1px 0px;
+color:#28999C;
+}
+#search box{
+width:auto;
+height: 100%;
+}
+#search button{
+background:white;
+color:dimgrey;
+height:40px;
+padding:5px 15px;
+border:1px solid lightgrey;
+}
+#chatBox{
+margin-top:-16%;
+position: fixed;
+width: 100%;
+height: 100%;
+background:white;
+display: none;
+}
+#chatListP{
+width: 92%;
+margin:0 auto;
+height:330px;
+padding: 0px 8px;
+overflow: auto;
+}
+#chatBox footer td{
+color: dimgrey;
+padding: 5px 3px;
+}
+#chatBox footer input{
+width:70%;
+height:30px;
+border:none;
+outline: none;
+}
+#chatBox footer:hover {
+width: 100%;
+position: absolute;
+bottom:0;
+}
+#messageMe{
+border-radius: 10px;
+padding:3px 6px ;
+word-break:break-word;
+max-width:300px;
+background:blue;
+height:auto;
+width:100px;
+color: White;
+margin-left:60%;
+}
+.status span{
+font-size:13px;
+}
+</style>
+</head>
+<body>
+	
+<div id="body">
+<nav>
+<table id="r1" >
+<tr>
+<td>
+<span id="facebook">facebook</span>
+
+</td>
+<td>
+<span class="fa fa-search"></span>
+</td>
+<td>
+<span class="fa fa-user"></span>
+</td>
+</tr>
+</table>
+<!--nav s -->
+<table id="r2" >
+<tr>
+<td id="home">
+<div><span class="notice1" >1</span></div>
+
+<span id="navD" class="fa fa-home"></span>
+</td>
+<td id="frndsList">
+<div><span class="notice2">1</span></div>
+
+<span id="navD" class="fa fa-users" ></span>
+</td>
+
+<td id="chat" >
+<div><span  class="notice3"></span></div>
+
+<span  style="color:#3054EF;text-shadow: none;"class="fa fa-commenting"></span>
+</td>
+
+<td id="video">
+<div><span class="notice4">1</span></div>
+
+<span id="navD" class="fa fa-video-camera"></span>
+</td>
+
+<td id="notice">
+<div><span class="notice5">1</span></div>
+
+<span class="fa fa-bell"></span>
+</td>
+
+<td id="menu" style="margin-left:100%; padding:0px 0px">
+<div><span class="notic6">1</span></div>
+<span  class="fa fa-reorder"></span>
+</td>
+</tr>
+</table>
+<hr>
+</nav>
+<div id="spc"></div>
+<!--nav end--><br>
+<br><br>
+<div id="scroll">
+<div id="scrollBody">	
+<table id="chatR1">
+<tr>
+<td id="messageG">
+<span class="fa fa-comment"> </span>
+</td>
+
+<td id="messageP">
+<span class="fa fa-users"> </span>
+</td>
+
+<td id="messageU">
+<span class="fa fa-user"> </span>
+</td>
+
+</tr>
+</table> 
+<div id="search"><div id="box"><input id="searching"><button class="fa fa-search" onclick="srch()"></button></div></div>
+<!--top navs finished-->
+<div style="overflow: auto">
+<table id="chatR2">
+<tr id="chatList">
+
+<td id="story">
+
+<div class="storyAd">
+<img class="listImg">
+</div>
+<span>your story</span>
+
+</td>
+</td>
+</tr>
+</table>
+</div><!--chtlists finished-->
+
+<div id="chatFrnds">
+</div>
+<button>see more</button>
+
+
+<!-- body finished-->
+</div>
+</div></div>
+<div id="chatBox">
+<table>
+<tr>
+<td id="exit">
+<span class="fa fa-arrow-left"></span>
+</td>
+<td>
+<img style="width: 50px; margin-left:-3%;height: 50px; border-radius: 25px;" class="chatImgs">
+</td>
+<td style="float:left"><span id="chatname">Austine</span>
+<div class="status"><span>online</span></div>
+</td>
+<td id="chatMenu" style="width:auto">
+<span onclick="alert('coming soon')" class="fa fa-ellipsis-v"></span>
+</td>
+</tr>
+</table><hr>
+<div id="chatListP">
+
+</div><br>
+<footer>
+<table><tr>
+<td><input class="img" type="file" id="camr" hidden><label for="camr"><span class="fa fa-camera"></span></label></td>
+<td style="border:1px solid lightgrey;">
+<input placeholder="type a message" id="message"><span id="sendM" class="fa fa-meh-o"></span></td>
+<td><span id="likeS" class="fa fa-thumbs-up"></span></td>
+</tr></table>
+</footer>
+</div>
+</body>
+<script src="../facebook.js" type="text/javascript"></script>
+<script src="../scripts/chat.js" type="text/javascript"></script></script>
+</html>

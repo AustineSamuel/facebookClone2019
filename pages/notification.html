@@ -1,0 +1,167 @@
+<!Doctype HTML>
+<html>
+<head>
+<meta charset="urf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../facebook.css" type="text/css"/>
+<script src="../jquery.js"></script>
+<script src="../scripts/loadScript.js" type="text/javascript"></script>
+
+<title>FACEBOOK CLONE</title>
+<style type="text/css">
+#nList ul{
+margin-left:-10%;
+}
+#read{
+background: #E5EDFB;
+}
+#nList img{
+width:50px;
+height: 50px;
+border-radius: 25px;
+}
+#nList b{
+padding:2px 6px;
+}
+#nList i{
+margin-left: 60%;
+}
+#nList span{
+color:dimgrey;
+font-size: 16px;
+text-align: center;
+}
+#sMore{
+margin-left:2%;
+font-size: 18px;
+background: None;
+border:1px solid lightgrey;
+}
+#sMore:active{
+background:#E5EDFB;
+}
+</style>
+
+</head>
+<body>
+<div id="body">
+<nav>
+<table id="r1" >
+<tr>
+<td>
+<span id="facebook">facebook</span>
+
+</td>
+<td>
+<span class="fa fa-search"></span>
+</td>
+<td>
+<span class="fa fa-user"></span>
+</td>
+</tr>
+</table>
+<!--nav s -->
+<table id="r2" >
+<tr>
+<td id="home">
+<div><span class="notice1" >1</span></div>
+
+<span id="navD" class="fa fa-home"></span>
+</td>
+<td id="frndsList">
+<div><span class="notice2">1</span></div>
+
+<span id="navD" class="fa fa-users" ></span>
+</td>
+
+<td id="chat" >
+<div><span  class="notice3">1</span></div>
+
+<span   class="fa fa-commenting"></span>
+</td>
+
+<td id="video">
+<div><span class="notice4">1</span></div>
+
+<span id="navD" class="fa fa-video-camera"></span>
+</td>
+
+<td id="notice">
+<div><span class="notice5">1</span></div>
+
+<span style="color:#3054EF;text-shadow: none;" class="fa fa-bell"></span>
+</td>
+
+<td id="menu" style="margin-left:100%; padding:0px 0px">
+<div><span class="notic6">1</span></div>
+<span  class="fa fa-reorder"></span>
+</td>
+</tr>
+</table>
+<hr>
+</nav>
+<div id="spc"></div>
+<!--nav end--><br>
+<br><br>
+<div id="scroll">
+<div id="scrollBody">
+<h3 class="all" id="viewall">Mark All as Read</h3>
+
+<div id="nList">
+<ul>
+</ul>
+<button id="sMore">see more</button>
+</div>
+<!-- body finished-->
+</div>
+</div></div>
+</body>
+<script src="../facebook.js" type="text/javascript"></script>
+<script src="../scripts/frnds.js" type="text/javascript"></script></script>
+<script type="text/javascript">
+const imgs=["https://i.imgur.com/aVMfsM1.jpg", "https://i.imgur.com/kDb8oUO.jpg","https://i.imgur.com/lqBefwD.jpg","https://i.imgur.com/uur6jIm.png","https://i.imgur.com/S2ePMki.jpg","https://i.imgur.com/4ezTQbl.jpg","https://i.imgur.com/BFuNPvP.jpg","https://i.imgur.com/BzVMgpN.jpg","https://i.imgur.com/CfeWNgT.jpg","https://i.imgur.com/FlREWaU.jpg","https://i.imgur.com/GiARP0h.jpg","https://i.imgur.com/MRvZ7Ak.jpg","https://i.imgur.com/OTpPbWG.jpg","https://i.imgur.com/OTpPbWG.jpg","https://i.imgur.com/QFC8Izu.jpg","https://i.imgur.com/QZnHKVZ.jpg","https://i.imgur.com/Ww0K6t3.jpg","https://i.imgur.com/Y84z4b5.jpg","https://i.imgur.com/YD0j6lm.jpg","https://i.imgur.com/ZX4Z5Ji.jpg","https://i.imgur.com/bN6uW4s.jpg","https://i.imgur.com/l7Mpnop.jpg","https://i.imgur.com/okI2Hrx.jpg","https://i.imgur.com/pXmrjTg.jpg","https://i.imgur.com/wBAQU5Z.jpg","https://i.imgur.com/ySAAqDG.jpg","https://i.imgur.com/zxkReVx.jpg"];
+const Fnames=["Ola John","goodness","petter","Love","Gavel","Julie","Petter","Smart D","Favour","Johnson","YogaD.k","Champion","FilYo","X-Man ","Supper ","Free","Vivian",'Happiness',"Kelvin","MIra","*Coder"," Deeply "];
+const info=["react to your post ","commented on your post","Change his profile picture","have watch your profile Picture for more than an hour","like your story","tag you in a post","accepted your friend request","send you a friend request"];
+n=20;
+const loop=(s)=>{
+for(i=0;i<n;i++){
+let time=Math.floor(Math.random()*60)+s+" ago";
+$("#nList>ul").append(`
+<div id="read" style="border-bottom:1px solid lightgrey;"><li>
+<img src="`+imgs[i]+`"><b>`+Fnames[i]+` </b>
+<span> and `+Math.floor(Math.random()*999)+` others `+info[Math.floor(Math.random()*info.length)]+`</span>
+</li>
+<li><span>`+time+`</span></li>
+</div>
+`);
+Fnames.push(Fnames[i]);
+imgs.push(imgs[i]);
+}
+$("ul>#read").click(function(){
+$(this).attr("style","background: none");
+});
+$(".all").click(function(){
+$("ul>#read").attr("style","background:none");
+});
+}
+loop("s");
+let durs=0;
+let dd=["m","hrs","months","years"]
+$("#sMore").click(function(){
+$(this).html("loading....");
+let that=$(this);
+setTimeout(()=>{
+that.html("see more");
+if(durs<dd.length){
+n+=11;
+loop(dd[durs]);
+durs++;
+}
+else {
+alert("no more records");
+}
+},1300);
+});
+</script>
+</html>

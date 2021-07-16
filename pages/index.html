@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="urf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../facebook.css" type="text/css"/>
+<script src="../jquery.js"></script>
+<title>FACEBOOK CLONE</title>
+<style type="text/css">
+#page{
+display: flex;
+align-items:center;
+justify-content:center;
+width:100%;
+height:530px;
+background: blue;
+position: fixed;
+}
+#page img{
+width:60px;
+height:60px;
+border-radius: 3px;
+Margin-left:12px;
+}
+li{
+list-style-type:none;
+}
+li span{
+color:#C0C1CC;
+font-size:2px;
+}
+#a,#b,#c,#d,#e{
+animation-name:;
+animation-duration:1s;
+animation-iteration-count:1000;
+}
+@keyframes loadNow{
+0%{color:#C0C1CC;}
+100%{color:white;}
+}
+</style>
+</head>
+<body>
+<div id="page">
+
+<div>
+<img src="https://i.imgur.com/fOFsdAL.jpg">
+<li>
+<span id="a" class="fa fa-square"></span>
+<span id="b" class="fa fa-square"></span>
+<span id="c" class="fa fa-square"></span>
+<span id="d" class="fa fa-square"></span>
+<span id="e" class="fa fa-square"></span>
+</li>
+</div>
+
+</div>
+<div style="display:none;" id="body">
+<nav>
+<table id="r1" >
+<tr>
+<td>
+<span id="facebook">facebook</span>
+
+</td>
+<td>
+<span class="fa fa-search"></span>
+</td>
+<td>
+<span class="fa fa-user"></span>
+</td>
+</tr>
+</table>
+<!--nav s -->
+<table id="r2" >
+<tr>
+<td id="home">
+<div><span class="notice1">1</span></div>
+
+<span style="color:#3054EF;text-shadow: none;" id="navD" class="fa fa-home"></span>
+</td>
+<td id="frndsList">
+<div><span class="notice2">1</span></div>
+
+<span id="navD" class="fa fa-users"></span>
+</td>
+
+<td id="chat">
+<div><span class="notice3">1</span></div>
+
+<span class="fa fa-commenting"></span>
+</td>
+
+<td id="video">
+<div><span class="notice4">1</span></div>
+
+<span id="navD" class="fa fa-video-camera"></span>
+</td>
+
+<td id="notice">
+<div><span class="notice5">1</span></div>
+
+<span class="fa fa-bell"></span>
+</td>
+
+<td id="menu" style="margin-left:100%; padding:0px 0px">
+<div><span class="notice6">1</span></div>
+<span  class="fa fa-reorder"></span>
+</td>
+</tr>
+</table>
+<hr>
+</nav>
+<div id="spc"></div>
+<!--nav end--><br>
+<br><br>
+<div id="scroll">
+<div id="scrollBody">	
+<table id="r3" >
+<tr>
+<td>
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+</td>
+
+<td>
+<textarea placeholder="whats on your mind"></textarea>
+</td>
+
+<td>
+<span class="fa fa-area-chart"></span>
+</td>
+</tr>
+</table>
+<table id="r4" >
+<tr>
+<td>
+<span class="fa fa-edit"></span>
+
+</td>
+<td>
+<span style="color:red;" class="fa fa-video-camera"></span>
+</td>
+
+<td>
+<span style="color:red;"class="fa fa-map-marker"></span>
+</td>
+</tr>
+</table>
+<!-- story-->
+<div id="story" style="overflow:auto;width:100%; height:auto;">
+<table id="r5" >
+<tr>
+<td>
+<button>+</button>
+<input id="ff" type="file" hidden>
+<label for="ff"><img  src="https://i.imgur.com/mzBe9Ns.jpg">
+</label><footer>smart dev</footer>
+</td>
+
+<td>
+<button>1</button>
+<img class="storyImgs" src="">
+<footer>perfect love</footer>
+</td>
+<td>
+<button>4</button>
+
+<img class="storyImgs" src="">
+
+<footer>smart</footer>
+</td>
+<td>
+<button>21</button>
+<img class="storyImgs" src="">
+<footer> juliana</footer>
+</td>
+<td>
+
+<button>3</button>
+
+<img class="storyImgs" src="">
+<footer>love zeezy</footer>
+</td>
+<td>
+<button>5</button>
+
+<img class="storyImgs" src="">
+<footer>hard dev</footer>
+</td>
+<td>
+<button>.</button>
+
+<img class="storyImgs" src="">
+<footer>see more</footer>
+</td>
+</tr>
+</table>
+</div>
+<h3 id="viewall" >view all stories</h3>
+
+<!--Facebook post started-->
+<div class="body" id="postBody">
+<div id="post">
+<table>
+<tr>
+<td>
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+</td>
+<td style="text-align:left;" id="n">
+<b><span id="name">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText">
+I use JavaScript programming and other JavaScript frameworks for this project</div>
+<div class="postMain">
+<img src="https://i.imgur.com/5BG8UyG.jpg"/>
+</div>
+<div id="people">
+<span id="a">😂</span>
+<span id="b">👍</span>
+<span id="c">😮</span>
+<span id="rNumber">101</span>
+</div>
+<table id="reaction">
+<tr>
+<td class="button" id="likeClick">
+<span class="fa fa-thumbs-o-up" id="like">
+101</span>
+</td>
+<td class="button" id="comments">
+<span class="fa fa-comment-o" id="comment">
+11</span>
+</td>
+<td  clasd="button" id="share">
+<span class="fa fa-mail-send"  id="share">
+8</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">Be the first to comment</h5>
+<div id="comment_list">
+
+</div>
+<div id="commentBox">
+<textarea placeholder="Write a comment" id="text"></textarea>
+<button id="postComment" class="fa fa-send"></button></div>
+</div>
+</div>
+<!--new post-->
+<div class="postBody" id="postBody1">
+<div class="post" id="post1">
+<table>
+<tr>
+<td>
+
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+
+</td>
+<td style="text-align:left;" id="n1">
+<b><span id="name1">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText1">
+I did this project just for fun ...
+feel free to ask me for the SRC code ..always available</div>
+<div class="postMain">
+<img src="https://i.imgur.com/V0pLBEM.jpg"/>
+</div>
+<div id="people1">
+<span id="a1">😂</span>
+<span id="b1">👍</span>
+<span id="c1">😮</span>
+<span id="rNumber1">131</span>
+</div>
+<table id="reaction1">
+<tr>
+<td class="button" id="likeClick1">
+<span class="fa fa-thumbs-o-up" id="like1">
+131</span>
+</td>
+<td class="button" >
+<span class="fa fa-comment-o" id="comment1">
+</span>
+</td>
+<td class="button" id="share1">
+<span class="fa fa-mail-forward" id="share">
+8</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">Be the first to comment</h5>
+<div class="comment_list" id="comment_list">
+
+</div>
+<div class="commentBox" id="commentBox">
+<textarea class="text" placeholder="Write a comment" id="text1"></textarea>
+<button id="postComment1" class="fa fa-send"></button></div>
+</div>
+</div>
+
+<!--new post-->
+<div class="postBody"id="postBody2">
+<div class="post" id="post2">
+<table>
+<tr>
+<td>
+
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+
+</td>
+<td style="text-align:left;" id="n1">
+<b><span id="name1">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText1">
+No time to check time</div>
+<div class="postMain">
+<img src="https://i.imgur.com/K3bWFff.png"/>
+</div>
+<div id="people1">
+<span id="a1">😂</span>
+<span id="b1">👍</span>
+<span id="c1">😮</span>
+<span id="rNumber2">131</span>
+</div>
+<table id="reaction1">
+<tr>
+<td class="button" id="likeClick2">
+<span class="fa fa-thumbs-o-up" id="like2">
+131</span>
+</td>
+<td class="button" id="comment">
+<span class="fa fa-comment-o" id="comment2">801</span>
+</td>
+<td class="button" id="share2">
+<span class="fa fa-mail-forward" id="share">
+5</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">owner specified who can see comment</h5>
+<div class="comment_list" id="comment_list">
+
+</div>
+<div class="commentBox" id="commentBox">
+<textarea class="text" placeholder="Write a comment" id="text2"></textarea>
+<button id="postComment2" class="fa fa-send"></button></div>
+</div>
+</div>
+<!--add friends-->
+<div id="r6" class="friends_list">
+<div id="friends_list" style="overflow:auto;width:100%; height:auto;">
+<table id="r5" >
+<tr>
+<td>
+<button><b>Dyna Mathew</b> <br>21 mutual freinds</button>
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+<footer class="friend">smart dev</footer>
+</td>
+
+<td>
+<button><b>philip John</b> <br>2 mutual freinds</button>
+<img src="https://i.imgur.com/KHsEP7s.jpg">
+<footer class="friend">autino</footer>
+</td>
+<td>
+<button><b>Fel Boy</b> <br>167mutual freinds</button>
+
+<img src="https://i.imgur.com/QZnHKVZ.jpg">
+
+<footer class="friend" >smart</footer>
+</td>
+<td>
+<button><b>Diana Victor</button>
+<img src="https://i.imgur.com/Ww0K6t3.jpg">
+<footer class="friend"> juliana</footer>
+</td>
+<td>
+
+<button><b>Wisdom Achi</b> <br>32 mutual freinds</button>
+
+<img src="https://i.imgur.com/bN6uW4s.jpg">
+<footer class="friend">love zeezy</footer>
+</td>
+<td>
+<a href=""><button><b>Austine Samuel</b> <br>211 mutual freinds</button></a>
+
+<img src="https://i.imgur.com/gAqimnm.jpg">
+<footer class="friend">hard dev</footer>
+</td>
+<td>
+<button>Love Godwin</button>
+
+<img src="https://i.imgur.com/lqBefwD.jpg">
+<footer class="friend">see more</footer>
+<td>
+<button>Peace Loren's</button>
+
+<img src="https://i.imgur.com/iodrvgg.jpg">
+<footer class="friend">see more</footer>
+</td><td>see more</td>
+</tr>
+</table>
+</div>
+</div>
+<!--add friends finished-->
+<!--new post-->
+<div class="postBody" id="postBody3">
+<div class="post" id="post3">
+<table>
+<tr>
+<td>
+
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+
+</td>
+<td style="text-align:left;" id="n1">
+<b><span id="name1">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText1">
+how to master  programming ?? </div>
+<div class="postMain">
+<img src="https://i.imgur.com/YyM7M5B.jpg"/>
+</div>
+<div id="people1">
+<span id="a1">😂</span>
+<span id="b1">👍</span>
+<span id="c1">😮</span>
+<span id="rNumber3">998</span>
+</div>
+<table id="reaction1">
+<tr>
+<td class="button" id="likeClick3">
+<span class="fa fa-thumbs-o-up" id="like3">
+998</span>
+</td>
+<td class="button">
+<span class="fa fa-comment-o" id="comment3">
+801</span>
+</td>
+<td class="button" id="share3">
+<span class="fa fa-mail-forward" id="share">
+18</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">owner specified who can see comment</h5>
+<div class="comment_list" id="comment_list">
+
+</div>
+<div class="commentBox" id="commentBox">
+<textarea class="text" placeholder="Write a comment" id="text3"></textarea>
+<button id="postComment3" class="fa fa-send"></button></div>
+</div>
+</div>
+<!--follow-->
+<!--add friends-->
+<div id="r7" class="friends_list">
+<div id="friends_list" style="overflow:auto;width:100%; height:auto;">
+<table id="r5" >
+<tr>
+<td>
+<button><b>Dyna peace</b> <br>21M liked</button>
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+<footer class="friend1">like</footer>
+</td>
+
+<td>
+<button><b>philip John</b> <br>25k others liked</button>
+<img src="https://i.imgur.com/K3bWFff.png">
+<footer class="friend1">like</footer>
+</td>
+<td>
+<button><b>Fel Boy</b> <br>167k others like</button>
+
+<img src="https://i.imgur.com/S2ePMki.jpg">
+
+<footer class="friend1" >like</footer>
+</td>
+<td>
+<button><b>Diana Victor liked </button>
+<img src="https://i.imgur.com/ZX4Z5Ji.jpg">
+<footer class="friend1">like</footer>
+</td>
+<td>
+
+<button><b>Wisdom Achi</b> <br>32k others liked</button>
+
+<img src="https://i.imgur.com/l7Mpnop.jpg">
+<footer class="friend1">love zeezy liked </footer>
+</td>
+<td>
+<a href=""><button><b>Austine Samuel</b> <br>and 211k others liked</button></a>
+
+<img src="https://i.imgur.com/uur6jIm.png">
+<footer class="friend1">hard dev</footer>
+</td>
+<td>
+<button>Love Godwin</button>
+
+<img src="https://i.imgur.com/wBAQU5Z.jpg">
+<footer class="friend1">see more</footer>
+<td>
+<button>Peace Loren's</button>
+
+<img src="https://i.imgur.com/fY5foGC.jpg">
+<footer class="friend1">see more</footer>
+</td><td>see more</td>
+</tr>
+</table>
+</div>
+</div>
+<!--follow friends finished-->
+<!--new post-->
+<div class="postBody" id="postBody4">
+<div class="post" id="post4">
+<table>
+<tr>
+<td>
+
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+
+</td>
+<td style="text-align:left;" id="n1">
+<b><span id="name1">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText1">
+reallity😂😂😂😂</div>
+<div class="postMain">
+<img src="https://i.imgur.com/OyB9H4v.jpg"/>
+</div>
+<div id="people1">
+<span id="a1">😂</span>
+<span id="b1">👍</span>
+<span id="c1">😮</span>
+<span id="rNumber4">708</span>
+</div>
+<table id="reaction1">
+<tr>
+<td class="button" id="likeClick4">
+<span class="fa fa-thumbs-o-up" id="like4">
+708</span>
+</td>
+<td class="button" id="comment">
+<span class="fa fa-comment-o" id="comment4">
+600</span>
+</td>
+<td class="button" id="share4">
+<span class="fa fa-mail-forward" id="share">
+1</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">owner specified who can see comment</h5>
+<div class="comment_list" id="comment_list">
+
+</div>
+<div class="commentBox" id="commentBox">
+<textarea class="text" placeholder="Write a comment" id="text4"></textarea>
+<button id="postComment4" class="fa fa-send"></button></div>
+</div>
+</div>
+<!--post finished-->
+<!--new post-->
+<div class="postBody" id="postBody5">
+<div class="post" id="post5">
+<table>
+<tr>
+<td>
+
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+
+</td>
+<td style="text-align:left;" id="n1">
+<b><span id="name1">Austine Samule</span></b> <i style="color:grey;"class="fa fa-play"></i>
+</td>
+<td>
+<span class="fa fa-ellipsis-h"></span>
+</td>
+</tr>
+</table>
+<div id="pText1">
+please don't forget to like this code share and comment for this code ..it takes me almost two weeks to finish this....still some part of code didn't work😐.
+we all learn together</div>
+<div class="postMain">
+<img src="https://i.imgur.com/oltk5Hn.jpg"/>
+</div>
+<div id="people1">
+<span id="a1">😂</span>
+<span id="b1">👍</span>
+<span id="c1">😮</span>
+<span id="rNumber5">998</span>
+</div>
+<table id="reaction1">
+<tr>
+<td class="button" id="likeClick5">
+<span class="fa fa-thumbs-o-up" id="like5">
+995</span>
+</td>
+<td class="button" id="comment">
+<span class="fa fa-comment-o" id="comment5">
+559</span>
+</td>
+<td class="button" id="share5">
+<span class="fa fa-mail-forward" id="share">
+9</span>
+</td>
+</tr>
+</table>
+<h5 style="color: grey;text-align: center">owner specified who can see comment</h5>
+<div class="comment_list" id="comment_list">
+
+</div>
+<div class="commentBox" id="commentBox">
+<textarea class="text" placeholder="Write a comment" id="text5"></textarea>
+<button id="postComment5" class="fa fa-send"></button></div>
+</div>
+</div>
+<!--finished-->
+<h3 id="viewall" >more stories</h3>
+
+<!-- body finished-->
+</div></div></div>
+
+<div id="storyF">
+<table>
+<tr>
+<td>
+<img src="https://i.imgur.com/mzBe9Ns.jpg">
+</td>
+<td>
+<span style="float:left; color:white;">King zee</span>
+</td>
+<td class="fa fa-ellipsis-h"></td>
+<td id="removeS" class="fa fa-times"></td>
+</tr>
+<tr>
+<td>
+<button id="next"><</button>
+</td>
+<td>
+<button id="prev">></button>
+</td>
+</tr>
+</table>
+<footer>
+<input placeholder="reply...." >
+</footer>
+</div>
+<script src="../facebook.js" type="text/javascript"></script>
+<script src="../scripts/frnds.js" type="text/javascript"></script>
+<script type="text/javascript">
+//test codes
+let S_imgs=document.getElementsByClassName("storyImgs")
+let imgs=["https://i.imgur.com/aVMfsM1.jpg", "https://i.imgur.com/kDb8oUO.jpg","https://i.imgur.com/lqBefwD.jpg","https://i.imgur.com/uur6jIm.png","https://i.imgur.com/S2ePMki.jpg","https://i.imgur.com/4ezTQbl.jpg","https://i.imgur.com/BFuNPvP.jpg","https://i.imgur.com/BzVMgpN.jpg","https://i.imgur.com/CfeWNgT.jpg","https://i.imgur.com/FlREWaU.jpg","https://i.imgur.com/GiARP0h.jpg","https://i.imgur.com/MRvZ7Ak.jpg","https://i.imgur.com/OTpPbWG.jpg","https://i.imgur.com/OTpPbWG.jpg","https://i.imgur.com/QFC8Izu.jpg","https://i.imgur.com/QZnHKVZ.jpg","https://i.imgur.com/Ww0K6t3.jpg","https://i.imgur.com/Y84z4b5.jpg","https://i.imgur.com/YD0j6lm.jpg","https://i.imgur.com/ZX4Z5Ji.jpg","https://i.imgur.com/bN6uW4s.jpg","https://i.imgur.com/l7Mpnop.jpg","https://i.imgur.com/okI2Hrx.jpg","https://i.imgur.com/pXmrjTg.jpg","https://i.imgur.com/wBAQU5Z.jpg","https://i.imgur.com/ySAAqDG.jpg","https://i.imgur.com/zxkReVx.jpg"];
+imgs=imgs.reverse();
+for(i=0;i<S_imgs.length;i++){
+S_imgs[i].src=imgs[i];
+}
+//loading
+loading=-1;
+function select(x){
+return document.querySelector(x);
+}
+
+let loadN=()=>{
+switch(loading) {
+case 0:
+select("#a").style.color="white";
+select("#a").style.animateName="loadNow";
+break;
+case 1:
+select("#b").style.color="white";
+select("#b").style.animateName="loadNow";
+break;
+case 2:
+select("#c").style.color="white";
+select("#c").style.animateName="loadNow";
+break;
+case 3:
+select("#d").style.color="white";
+select("#d").style.animateName="loadNow";
+break;
+case 4:
+$("#body").attr("style","display:block")
+$("#page").attr("style","display:none");
+select("#e").style.color="white";
+select("#e").style.animateName="loadNow";
+alert("Welcome to Facebook");
+alert("remember this is not real Facebook is a clone I create .... ");
+break;
+default:
+break;
+}
+return loading++;
+}
+loadN();
+setInterval(loadN,3000);
+</script>
+</body>
+</html>
